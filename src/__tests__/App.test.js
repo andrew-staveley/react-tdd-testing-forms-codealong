@@ -37,6 +37,11 @@ test("checkbox appears as unchecked when user clicks a second time", () => {
 });
 
 // Size select element
+test("Size select element initially displays `Small`", () => {
+  render(<App />)
+  const selectSize = screen.getByLabelText(/select size/i)
+  expect(selectSize).toHaveDisplayValue("Small")
+})
 
 // "Your Selection" text
 
